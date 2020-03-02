@@ -24,16 +24,20 @@ class GameViewModel : ViewModel() {
      private val _word = MutableLiveData<String>()
      val word : LiveData<String>
         get() = _word
+
     // The current score
     private val _score = MutableLiveData<Int>()
     val score : LiveData<Int>
        get() = _score
+
     // The list of words - the front of the list is the next word to guess
     private lateinit var wordList: MutableList<String>
+
     // The current event_game_Finish
     private val _eventGameFinish = MutableLiveData<Boolean>()
     val eventGameFinish : LiveData<Boolean>
         get() = _eventGameFinish
+
     // The current time with timer
     private val _currentTime = MutableLiveData<Long>()
     val currentTime : LiveData<Long>
